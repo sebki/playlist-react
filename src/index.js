@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {Navbar} from './components/navbar.jsx';
 import {Home} from './components/home.jsx'
+import {Header} from './components/header.jsx'
 
 class App extends React.Component {
     render() {
         return(
             <div>
-              <Navbar />
+              <Header />
               <Home />
             </div>
         )
