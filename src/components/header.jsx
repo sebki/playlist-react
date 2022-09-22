@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar } from "./navbar.jsx";
+import { Link } from 'react-router-dom';
 
 function Logo() {
     return(
@@ -48,11 +49,13 @@ function Logo() {
   
   function UserSymbol() {
     return (
-      <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="34.5" cy="34.5" r="34.5" fill="#01DEE6"/>
-        <path d="M31.0614 26.4525C32.6794 23.9658 36.3205 23.9658 37.9385 26.4525L53.7162 50.7024C55.4918 53.4313 53.5334 57.0419 50.2777 57.0419H18.7221C15.4664 57.0419 13.5081 53.4313 15.2836 50.7024L31.0614 26.4525Z" fill="#2F2D6D"/>
-        <circle cx="34.459" cy="19.6088" r="13.2093" fill="#2F2D6D" stroke="#01DEE6" strokeWidth="5.74316"/>
-      </svg>
+        <Link to={'/login'}>
+            <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="34.5" cy="34.5" r="34.5" fill="#01DEE6"/>
+                <path d="M31.0614 26.4525C32.6794 23.9658 36.3205 23.9658 37.9385 26.4525L53.7162 50.7024C55.4918 53.4313 53.5334 57.0419 50.2777 57.0419H18.7221C15.4664 57.0419 13.5081 53.4313 15.2836 50.7024L31.0614 26.4525Z" fill="#2F2D6D"/>
+                <circle cx="34.459" cy="19.6088" r="13.2093" fill="#2F2D6D" stroke="#01DEE6" strokeWidth="5.74316"/>
+            </svg>
+        </Link>
     )
   }
   
@@ -60,7 +63,7 @@ function Logo() {
 class Header extends React.Component {
     render() {
         return(
-            <nav className='flex flex-row bg-indigo'>
+            <header className='flex flex-row bg-indigo'>
                 <div className='px-8 py-8'>
                     <Logo />
                 </div>
@@ -70,7 +73,7 @@ class Header extends React.Component {
                 <div className='px-8 py-12  '>
                     <UserSymbol />
                 </div>
-            </nav>
+            </header>
         )
     }
 }
