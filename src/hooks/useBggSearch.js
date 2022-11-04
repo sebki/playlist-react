@@ -14,9 +14,12 @@ const useBggSearch = () => {
             }
         });
 
-        setResult(data.item);
-
-        console.log(result)
+        if (data) {
+            setResult(data);
+        } else {
+            setResult([]);
+        };
+        
     };
     
     return [result, apiCall];
